@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <script src="../js/apishop.js"></script>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <p class="marca">SHOP API</p>
+        <h1>Catálogo de productos</h1>
+        <p class="subtitulo">Selecciona un producto para consultar su información.</p>
+    </header>
+
+    <main class="contenido">
+
+        <div class="barraSuperior">
+            <h2>Productos disponibles</h2>
+            <input type="text" id="buscador" placeholder="Buscar producto..." oninput="buscarProducto()">
+        </div>
+
+        <div class="gridContainer colorDivPadre" id="gridContainer">
+
+        </div>
+
+    </main>
+
+    <script>
+
+        extraerProductos()
+
+    </script>
+</body>
+</html>

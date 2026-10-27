@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del producto</title>
+    <script src="../js/apishop.js"></script>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <p class="marca">SHOP API</p>
+        <h1>Detalle del producto</h1>
+    </header>
+
+    <main class="contenido">
+
+        <a class="volver" href="index.html">← Volver al catálogo</a>
+
+        <section class="detalle">
+
+            <div class="detalleImagen">
+                <img id="imagenProducto" src="" alt="">
+            </div>
+
+            <div class="detalleInfo">
+                <p class="categoria" id="categoria"></p>
+                <h2 id="nombre"></h2>
+                <p class="precioDetalle" id="precio"></p>
+                <p class="descripcion" id="descripcion"></p>
+
+                <div class="datos">
+                    <div class="dato">
+                        <span>Calificación</span>
+                        <strong class="rating" id="rating"></strong>
+                    </div>
+                    <div class="dato">
+                        <span>Stock</span>
+                        <strong id="stock"></strong>
+                    </div>
+                    <div class="dato">
+                        <span>Marca</span>
+                        <strong id="marca"></strong>
+                    </div>
+                    <div class="dato">
+                        <span>Descuento</span>
+                        <strong id="descuento"></strong>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+
+        let parametros = new URLSearchParams(window.location.search)
+        let id = parametros.get('id')
+        extraerDatosProducto(id)
+
+    </script>
+
+</body>
+</html>
